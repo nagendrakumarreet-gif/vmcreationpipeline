@@ -1,0 +1,21 @@
+title = "Custom Gitleaks Rules - Terraform Hardcoded Password"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "terraform-hardcoded-password"
+description = "Detect hardcoded passwords in Terraform files"
+
+# Detects:
+# admin_password = "DevOps@123"
+# password = "Welcome@123"
+# db_password = "Sql@123"
+
+regex = '''(?i)(admin_password|password|db_password|sql_password|root_password)\s*=\s*"[^"]+"'''
+
+secretGroup = 0
+
+tags = ["terraform", "password", "hardcoded"]
+
+path = '''(?i)\.(tf|tfvars)$'''
