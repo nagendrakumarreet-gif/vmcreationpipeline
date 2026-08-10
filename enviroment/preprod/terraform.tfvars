@@ -3,6 +3,10 @@ rgsg ={
         name = "rg-preproduction"
         location = "centralindia"
     }
+     rg2 = {
+        name = "rg-preproduction"
+        location = "centralindia"
+    }
 }
 
 vnetss = {
